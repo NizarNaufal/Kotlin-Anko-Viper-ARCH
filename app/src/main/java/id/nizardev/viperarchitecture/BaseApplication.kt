@@ -11,10 +11,6 @@ class BaseApplication : Application() {
         lateinit var INSTANCE: BaseApplication
     }
 
-    init {
-        INSTANCE = this
-    }
-
     // Routing layer (VIPER)
     lateinit var cicerone: Cicerone<Router>
 
@@ -24,7 +20,7 @@ class BaseApplication : Application() {
         this.initCicerone()
     }
 
-    private fun BaseApplication.initCicerone() {
+    private fun initCicerone() {
         this.cicerone = Cicerone.create()
     }
 }
